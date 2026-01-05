@@ -5,7 +5,6 @@ import {
   FaFigma,
   FaInstagram,
   FaBehance,
-  FaAdobe,
 } from "react-icons/fa";
 import { SiAdobephotoshop, SiAdobexd } from "react-icons/si";
 
@@ -13,14 +12,14 @@ import Avatar from "../../components/Avatar";
 import Circles from "../../components/Circles";
 import { fadeIn } from "../../variants";
 
-// About data (REALISTIC & CLEAN)
+// About data (SAFE ICONS ONLY)
 export const aboutData = [
   {
     title: "skills",
     info: [
       {
         title: "Brand Design",
-        icons: [FaAdobe, SiAdobephotoshop],
+        icons: [SiAdobephotoshop],
       },
       {
         title: "UI / UX Design",
@@ -49,7 +48,7 @@ export const aboutData = [
     title: "education",
     info: [
       {
-        title: "Bachelor’s Degree – Engineering Background",
+        title: "Engineering Background",
         stage: "India",
       },
     ],
@@ -75,7 +74,7 @@ const About = () => {
       </motion.div>
 
       <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
-        {/* Left text */}
+        {/* Left */}
         <div className="flex-1 flex flex-col justify-center">
           <motion.h2
             variants={fadeIn("right", 0.2)}
@@ -95,7 +94,7 @@ const About = () => {
           >
             I’m Ashik Latheef, a brand designer based in Dubai. I help businesses
             create strong visual identities and engaging social media creatives
-            that stand out in competitive markets.
+            that stand out.
           </motion.p>
 
           {/* Counters */}
@@ -103,76 +102,63 @@ const About = () => {
             variants={fadeIn("right", 0.6)}
             initial="hidden"
             animate="show"
-            className="hidden md:flex md:max-w-xl xl:max-w-none mx-auto xl:mx-0 mb-8"
+            className="hidden md:flex mx-auto xl:mx-0 mb-8"
           >
-            <div className="flex flex-1 xl:gap-x-6">
-              <div className="flex-1">
-                <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={4} duration={4} />
+            <div className="flex gap-x-8">
+              <div>
+                <div className="text-4xl font-extrabold text-accent">
+                  <CountUp end={4} />
                 </div>
-                <div className="text-xs uppercase tracking-[1px]">
-                  Years experience
-                </div>
+                <div className="text-xs uppercase">Years experience</div>
               </div>
 
-              <div className="flex-1">
-                <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={100} duration={4} />
+              <div>
+                <div className="text-4xl font-extrabold text-accent">
+                  <CountUp end={100} />
                 </div>
-                <div className="text-xs uppercase tracking-[1px]">
-                  Projects delivered
-                </div>
+                <div className="text-xs uppercase">Projects</div>
               </div>
 
-              <div className="flex-1">
-                <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={50} duration={4} />
+              <div>
+                <div className="text-4xl font-extrabold text-accent">
+                  <CountUp end={50} />
                 </div>
-                <div className="text-xs uppercase tracking-[1px]">
-                  Happy clients
-                </div>
+                <div className="text-xs uppercase">Clients</div>
               </div>
             </div>
           </motion.div>
         </div>
 
-        {/* Right info */}
+        {/* Right */}
         <motion.div
           variants={fadeIn("left", 0.4)}
           initial="hidden"
           animate="show"
           className="flex flex-col w-full xl:max-w-[48%] h-[480px]"
         >
-          <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
-            {aboutData.map((item, itemI) => (
+          <div className="flex gap-x-6 mb-6 justify-center xl:justify-start">
+            {aboutData.map((item, i) => (
               <div
-                key={itemI}
-                className={`${
-                  index === itemI &&
-                  "text-accent after:w-full after:bg-accent"
-                } cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}
-                onClick={() => setIndex(itemI)}
+                key={i}
+                className={`cursor-pointer capitalize relative ${
+                  index === i && "text-accent"
+                }`}
+                onClick={() => setIndex(i)}
               >
                 {item.title}
               </div>
             ))}
           </div>
 
-          <div className="py-6 flex flex-col gap-y-4 items-center xl:items-start">
-            {aboutData[index].info.map((item, itemI) => (
-              <div
-                key={itemI}
-                className="flex flex-col md:flex-row gap-x-2 items-center text-white/60"
-              >
+          <div className="flex flex-col gap-y-4 items-center xl:items-start">
+            {aboutData[index].info.map((item, i) => (
+              <div key={i} className="text-white/70 text-center xl:text-left">
                 <div className="font-light">{item.title}</div>
-                <div className="hidden md:flex">-</div>
-                <div>{item.stage}</div>
+                {item.stage && <div className="text-sm">{item.stage}</div>}
 
-                <div className="flex gap-x-4">
-                  {item.icons?.map((Icon, iconI) => (
-                    <div key={iconI} className="text-2xl text-white">
-                      <Icon />
-                    </div>
+                <div className="flex gap-x-4 justify-center xl:justify-start mt-2">
+                  {item.icons?.map((Icon, idx) => (
+                    <Icon key={idx} className="text-2xl text-white" />
                   ))}
                 </div>
               </div>
