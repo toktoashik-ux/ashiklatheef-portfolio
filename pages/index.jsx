@@ -20,8 +20,8 @@ const Home = () => {
             exit="hidden"
             className="h1"
           >
-            Transforming Ideas <br /> Into{" "}
-            <span className="text-accent">Digital Reality</span>
+            Transforming Brands <br /> Into{" "}
+            <span className="text-accent">Digital Experiences</span>
           </motion.h1>
 
           {/* subtitle */}
@@ -32,10 +32,8 @@ const Home = () => {
             exit="hidden"
             className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16"
           >
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate,
-            exercitationem harum, quia nulla temporibus deleniti libero veniam
-            vero beatae numquam ducimus illum ab similique ipsam tempore fugit
-            quod laudantium debitis.
+            I’m Ashik Latheef, a brand designer based in Dubai, helping businesses build
+        strong visual identities and high-impact social media creatives.
           </motion.p>
 
           {/* btn */}
