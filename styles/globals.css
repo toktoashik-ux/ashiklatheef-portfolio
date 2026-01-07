@@ -48,4 +48,6 @@
   .textarea {
     @apply w-full h-[180px] p-6 rounded-lg resize-none;
   }
+* {
+  cursor: none;
 }
