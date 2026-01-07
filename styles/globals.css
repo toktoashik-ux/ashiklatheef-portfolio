@@ -49,3 +49,17 @@
     @apply w-full h-[180px] p-6 rounded-lg resize-none;
   }
 }
+/* =========================
+   HIDE DEFAULT CURSOR
+   ========================= */
+html,
+body,
+a,
+button,
+input,
+textarea,
+select,
+label {
+  cursor: none !important;
+}
+
