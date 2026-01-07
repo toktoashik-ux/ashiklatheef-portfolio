@@ -12,12 +12,12 @@ import {
 export const socialData = [
   {
     name: "YouTube",
-    link: "https://youtube.com",
+    link: "https://www.youtube.com/@Aashiye",
     Icon: RiYoutubeLine,
   },
   {
     name: "Instagram",
-    link: "https://instagram.com",
+    link: "https://instagram.com/aashiklatheef/",
     Icon: RiInstagramLine,
   },
   {
