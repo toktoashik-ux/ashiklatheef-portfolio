@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 
 import Layout from "../components/Layout";
 import Transition from "../components/Transition";
+import CustomCursor from "../components/CustomCursor";
 
 import "../styles/globals.css";
 
@@ -11,6 +12,9 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <Layout>
+      {/* Custom animated cursor */}
+      <CustomCursor />
+
       <AnimatePresence mode="wait">
         <motion.div key={router.route} className="h-full">
           <Transition />
