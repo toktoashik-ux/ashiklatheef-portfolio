@@ -37,7 +37,7 @@ export const socialData = [
   },
   {
     name: "Github",
-    link: "https://github.com/sanidhyy/modern-portfolio",
+    link: "https://www.behance.net/ashikrashi",
     Icon: RiGithubLine,
   },
 ];
