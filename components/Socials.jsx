@@ -5,7 +5,7 @@ import {
   RiInstagramLine,
   RiFacebookLine,
   RiDribbbleLine,
-  RiGithubLine,
+  RiBehanceLine,
   RiPinterestLine,
 } from "react-icons/ri";
 
@@ -36,9 +36,9 @@ export const socialData = [
     Icon: RiPinterestLine,
   },
   {
-    name: "Github",
-    link: "https://www.behance.net/ashikrashi",
-    Icon: RiGithubLine,
+  name: "Behance",
+  link: "https://www.behance.net/ashikrashi",
+  Icon: RiBehanceLine,
   },
 ];
 
@@ -53,7 +53,7 @@ const Socials = () => {
           target="_blank"
           rel="noreferrer noopener"
           className={`${
-            social.name === "Github"
+            social.name === "Behance"
               ? "bg-accent rounded-full p-[5px] hover:text-white"
               : "hover:text-accent"
           } transition-all duration-300`}
